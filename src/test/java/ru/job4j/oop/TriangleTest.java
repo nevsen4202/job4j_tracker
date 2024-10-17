@@ -1,18 +1,18 @@
 package ru.job4j.oop;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.offset;
 
 public class TriangleTest {
-
     @Test
-    public void whenTriangleNotExist() {
-        Point a = new Point(0, 0);
-        Point b = new Point(2, 0);
-        Point c = new Point(4, 0);
+    public void when00and40and04Then8() {
+        Points a = new Points(0, 0);
+        Points b = new Points(4, 0);
+        Points c = new Points(0, 4);
         Triangle triangle = new Triangle(a, b, c);
         double result = triangle.area();
-        assertEquals(-1, result, 0.01);
+        double expected = 8;
+        assertThat(result).isCloseTo(expected, offset(0.001));
     }
 }
-

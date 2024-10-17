@@ -1,11 +1,11 @@
 package ru.job4j.oop;
 
 public class Triangle {
-    private Point first;
-    private Point second;
-    private Point third;
+    private Points first;
+    private Points second;
+    private Points third;
 
-    public Triangle(Point ap, Point bp, Point cp) {
+    public Triangle(Points ap, Points bp, Points cp) {
         this.first = ap;
         this.second = bp;
         this.third = cp;
@@ -26,8 +26,7 @@ public class Triangle {
         double bc = second.distance(third);
         if (this.exist(ab, ac, bc)) {
             double p = semiPerimeter(ab, ac, bc);
-            /* написать формулу для расчета площади треугольника. */
-            result = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
+                        result = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
         }
         return result;
     }
