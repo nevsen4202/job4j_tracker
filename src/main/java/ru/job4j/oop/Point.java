@@ -6,10 +6,14 @@ import static java.lang.Math.pow;
 public class Point {
 
     private int x;
-
     private int y;
-
     private int z;
+
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
+        this.z = 0;
+    }
 
     public Point(int first, int second, int third) {
         this.x = first;
@@ -17,8 +21,11 @@ public class Point {
         this.z = third;
     }
 
-    public double distance3d(Point that) {
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
+    }
 
+    public double distance3d(Point that) {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2) + pow(this.z - that.z, 2));
     }
 
@@ -26,6 +33,12 @@ public class Point {
         Point a = new Point(0, 0, 1);
         Point b = new Point(0, 2, 2);
         double distance3d = a.distance3d(b);
-        System.out.println(distance3d);
+        System.out.println("3D Distance: " + distance3d);
+
+        Point c = new Point(0, 0);
+        Point d = new Point(0, 2);
+        double distance2d = c.distance(d);
+        System.out.println("2D Distance: " + distance2d);
     }
 }
+
