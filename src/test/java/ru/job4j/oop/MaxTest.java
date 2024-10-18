@@ -7,20 +7,20 @@ public class MaxTest {
 
     @Test
     public void whenMaxOfTwoNumbers() {
-        Max max = new Max();
-        assertEquals(5.0, max.max(2.0, 3.0), 0.01);
+        assertEquals(2, Max.max(1, 2));
+        assertEquals(3, Max.max(3, 2));
     }
 
     @Test
     public void whenMaxOfThreeNumbers() {
-        Max max = new Max();
-        assertEquals(6.0, max.max(1.0, 2.0, 3.0), 0.01);
+        assertEquals(3, Max.max(1, 2, 3));
+        assertEquals(4, Max.max(4, 2, 3));
     }
 
     @Test
     public void whenMaxOfFourNumbers() {
-        Max max = new Max();
-        assertEquals(10.0, max.max(1.0, 2.0, 3.0, 4.0), 0.01);
+        assertEquals(4, Max.max(1, 2, 3, 4));
+        assertEquals(5, Max.max(5, 2, 3, 4));
     }
 }
 
