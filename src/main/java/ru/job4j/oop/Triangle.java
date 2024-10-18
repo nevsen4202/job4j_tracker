@@ -1,11 +1,11 @@
 package ru.job4j.oop;
 
 public class Triangle {
-    private Points first;
-    private Points second;
-    private Points third;
+    private Point first;
+    private Point second;
+    private Point third;
 
-    public Triangle(Points ap, Points bp, Points cp) {
+    public Triangle(Point ap, Point bp, Point cp) {
         this.first = ap;
         this.second = bp;
         this.third = cp;
